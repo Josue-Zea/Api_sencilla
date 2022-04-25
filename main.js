@@ -15,6 +15,14 @@ app.get('/', function (req, res) {
   });
 });
 
+app.get('/resultadoFinal', function (req, res) {
+    res.send({
+        id: 2,
+        nombre: "Nombre diferente",
+        fecha: new Date()
+    });
+  });
+
 app.post("/suma",function(req, res){
     const { numero1, numero2 } = req.body;
     const resultado = Suma(numero1, numero2);
