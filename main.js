@@ -10,7 +10,8 @@ const { Division } = require("./Operaciones/Division");
 app.get('/', function (req, res) {
   res.send({
       id: 1,
-      nombre: "Pepito"
+      nombre: "Fulano",
+      fecha: new Date()
   });
 });
 
