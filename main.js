@@ -3,13 +3,16 @@ const app = express();
 app.use(express.json());
 
 const { Suma } = require("./Operaciones/Suma");
+const { Resta } = require("./Operaciones/Resta");
+const { Multiplicacion } = require("./Operaciones/Multiplicacion");
+const { Division } = require("./Operaciones/Division");
 
 app.get('/', function (req, res) {
   res.send({
       id: 1,
       nombre: "Pepito"
   });
-})
+});
 
 app.post("/suma",function(req, res){
     const { numero1, numero2 } = req.body;
@@ -19,19 +22,19 @@ app.post("/suma",function(req, res){
 
 app.post("/resta",function(req, res){
     const { numero1, numero2 } = req.body;
-    const resultado = Suma(numero1, numero2);
+    const resultado = Resta(numero1, numero2);
     res.send(resultado);
 });
 
 app.post("/multiplicacion",function(req, res){
     const { numero1, numero2 } = req.body;
-    const resultado = Suma(numero1, numero2);
+    const resultado = Multiplicacion(numero1, numero2);
     res.send(resultado);
 });
 
 app.post("/division",function(req, res){
     const { numero1, numero2 } = req.body;
-    const resultado = Suma(numero1, numero2);
+    const resultado = Division(numero1, numero2);
     res.send(resultado);
 });
 
