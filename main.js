@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
   res.send({
       id: 1,
       nombre: "Fulano",
-      fecha: new Date()
+      fecha: new Date
   });
 });
 
